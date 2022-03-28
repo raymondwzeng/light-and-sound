@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Hello world!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <h1>Light and Sound</h1>
+    <p>
+      Welcome to the "Light and Sound"! This is a little demo project as a prework assignment for CodePath's <a href="https://apply.codepath.com/cohorts/summer-internship-for-tech-excellence-summer-2022/versions/student/?ref=CZwS-gwb">Summer Internship for Tech Excellence</a>.
+      The rules of the game are simple - listen to the sounds or see the lights flashing, and repeat the pattern in the same order! Click the button below to begin.
+    </p>
+    
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">
+      Stop
+    </button>
+    <div id="gameButtonArea">
+      <button id="button1" onmousedown="guess(1)" onmouseup="stopTone()"></button>
+      <button id="button2" onmousedown="guess(2)" onmouseup="stopTone()"></button>
+      <button id="button3" onmousedown="guess(3)" onmouseup="stopTone()"></button>
+      <button id="button4" onmousedown="guess(4)" onmouseup="stopTone()"></button>
+    </div>
+  </body>
+</html>
