@@ -1,4 +1,6 @@
 //Global variables
+const e_egg1 = [2, 2, 2, 1, 2, 3]; //Mario
+
 var pattern = [2, 2, 4, 3, 2, 1, 2, 4];
 var progress = 0;
 var gamePlaying = false;
@@ -49,7 +51,9 @@ function playSingleClue(btnIndex) {
 
 function playClueSequence() {
   guessCounter = 0;
-  context.resume()
+  context.resume();
+  clueHoldTime = Math.exp(-2*progress/40) * 1000; //Make the game harder as you progress
+  console.log("New time:",clueHoldTime);
   let delay = nextClueWaitTime;
   for(let i = 0; i <= progress; i++) {
     console.log("Playing single clue", pattern[i], "in", delay, "ms");
@@ -80,6 +84,13 @@ function guess(btnIndex) {
     }
   }
 }
+
+function adjustVolume(volumeAmount) {
+  console.log("Changing volume to", volumeAmount.target.value);
+  volume = volumeAmount.target.value;
+}
+
+document.getElementById("volume").addEventListener("change", adjustVolume);
 
 function loseGame() {
   stopGame();

@@ -7,7 +7,7 @@ The pattern increases in complexity for each level, until either an error is mad
 # Time Breakdown
 
 - Adding basic functionality, brushing up on basic webdev HTML/CSS/JS (1 Hour)
-- Adding additional functionality, such as speeding up, additional buttons, and more (TBD)
+- Adding small additional functionality, such as speeding up, a volume slider, and slightly more impressive buttons (1 Hour)
 
 # Questions and Reflections
 

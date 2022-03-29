@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-    <title>Hello world!</title>
+    <title>Light and Sound</title>
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
@@ -27,11 +27,27 @@
     <button id="stopBtn" class="hidden" onclick="stopGame()">
       Stop
     </button>
+    <div class="flex-center">
+      <label for="volume">Volume</label>
+      <input id="volume" type="range" min="0" max="1" step="0.1" value="0.5"/>
+    </div>
+    
     <div id="gameButtonArea">
-      <button id="button1" onmousedown="guess(1)" onmouseup="stopTone()"></button>
-      <button id="button2" onmousedown="guess(2)" onmouseup="stopTone()"></button>
-      <button id="button3" onmousedown="guess(3)" onmouseup="stopTone()"></button>
-      <button id="button4" onmousedown="guess(4)" onmouseup="stopTone()"></button>
+      <div id="button1_bottom" class="button_bottom">
+        <button id="button1" onmousedown="guess(1)" onmouseup="stopTone()"></button>
+      </div>
+      
+      <div id="button2_bottom" class="button_bottom">
+        <button id="button2" onmousedown="guess(2)" onmouseup="stopTone()"></button>
+      </div>
+      
+      <div id="button3_bottom" class="button_bottom">
+        <button id="button3" onmousedown="guess(3)" onmouseup="stopTone()"></button>
+      </div>
+      
+      <div id="button4_bottom" class="button_bottom">
+        <button id="button4" onmousedown="guess(4)" onmouseup="stopTone()"></button>
+      </div>
     </div>
   </body>
 </html>

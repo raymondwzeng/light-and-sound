@@ -24,18 +24,44 @@ h1 {
 }
 
 button {
+  border-width: 0;
   padding: 10px;
   border-radius: 10px;
 }
 
-#gameButtonArea > button {
+#gameButtonArea {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#gameButtonArea > div > button {
   height: 200px;
   width: 200px;
   margin: 2px;
+  display: relative;
+  transform: translateY(-5px);
+}
+
+#gameButtonArea > div > button:active, #gameButton > div > #button.lit {
+    transition-duration: 100ms;
+    transform: translateY(0px);
 }
 
 .hidden {
   display: none;
+}
+
+.button_bottom {
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #button1 {
@@ -43,6 +69,10 @@ button {
 }
 
 #button1:active, #button1.lit {
+  background-color: green;
+}
+
+#button1_bottom {
   background-color: green;
 }
 
@@ -54,6 +84,10 @@ button {
   background-color: blue;
 }
 
+#button2_bottom {
+  background-color: blue;
+}
+
 #button3 {
   background-color: pink;
 }
@@ -62,11 +96,19 @@ button {
   background-color: red;
 }
 
+#button3_bottom {
+  background-color: red;
+}
+
 #button4 {
   background-color: lightyellow;
 }
 
 #button4:active, #button4.lit {
+  background-color: yellow;
+}
+
+#button4_bottom {
   background-color: yellow;
 }
 
