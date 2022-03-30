@@ -1,7 +1,12 @@
 //Global variables
-const e_egg1 = [2, 2, 2, 1, 2, 3]; //Mario
+var easterEggs = new Map();
+easterEggs.set("Mario", [2, 2, 2, 1, 2, 3]);
 
-var pattern = [2, 2, 4, 3, 2, 1, 2, 4];
+var currEasterEggs = new Map(); //A container for currently matching easter egg codes. This is needed because mutltiple easter eggs may begin with the same tone. Non-matching entries would then be removed.
+
+var easterEggProgress = 0;
+
+var pattern = [5, 2, 4, 3, 2, 1, 2, 4];
 var progress = 0;
 var gamePlaying = false;
 
@@ -14,9 +19,25 @@ var nextClueWaitTime = 1000;
 
 var guessCounter = 0;
 
+function playEasterEgg(easterEggName) {
+  if(easterEggName == "Mario") {
+    console.log("Wahoo!");
+    document.getElementById("github_logo").src = "https://cdn.glitch.global/3f2d6dc2-b99b-4f94-935a-476eeb1f9ed4/mario_idle.png?v=1648665575206";
+    setTimeout(() => {
+    document.getElementById("github_logo").src = "https://cdn.glitch.global/3f2d6dc2-b99b-4f94-935a-476eeb1f9ed4/GitHub-Mark-120px-plus.png?v=1648666680733" 
+    }, 1000)
+  }
+}
+
 function startGame() {
   progress = 0;
   gamePlaying = true;
+  
+  //Generate a random pattern of size 8 to pattern.
+  var i;
+  for(i = 0; i < 9; i++) { //Random generation algorithm from MDN documentation on Math.random(), URL: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    pattern[i] = Math.floor(Math.random() * (6 - 1) + 1);
+  }
   
   //Swap the start and stop buttons
   document.getElementById("startBtn").classList.add("hidden");
@@ -53,10 +74,8 @@ function playClueSequence() {
   guessCounter = 0;
   context.resume();
   clueHoldTime = Math.exp(-2*progress/40) * 1000; //Make the game harder as you progress
-  console.log("New time:",clueHoldTime);
   let delay = nextClueWaitTime;
   for(let i = 0; i <= progress; i++) {
-    console.log("Playing single clue", pattern[i], "in", delay, "ms");
     setTimeout(playSingleClue, delay, pattern[i]);
     delay += clueHoldTime;
     delay += cluePauseTime;
@@ -82,11 +101,37 @@ function guess(btnIndex) {
     } else { //Lose the game if they guess wrong
       loseGame();
     }
+  } else {
+    //Iterate through the map for easter eggs.
+    for(const [key, value] of easterEggs.entries()) {
+      var foundMatch = false;
+      if(value[easterEggProgress] == btnIndex) {
+        currEasterEggs.set(key, value);
+        foundMatch = true;
+      } else {
+        if(currEasterEggs.get(key)) {
+          currEasterEggs.delete(key);
+        }
+      }
+    }
+    if(foundMatch) {
+      easterEggProgress++;
+    } else {
+      easterEggProgress = 0;
+    }
+    for(const [key, value] of currEasterEggs.entries()) {
+      if(easterEggProgress == value.length) {
+        console.log("Playing easter egg with name", key);
+        playEasterEgg(key);
+        currEasterEggs.clear();
+        easterEggProgress = 0;
+      }
+    }
+    console.log(currEasterEggs, " progress", easterEggProgress);
   }
 }
 
 function adjustVolume(volumeAmount) {
-  console.log("Changing volume to", volumeAmount.target.value);
   volume = volumeAmount.target.value;
 }
 
@@ -94,7 +139,7 @@ document.getElementById("volume").addEventListener("change", adjustVolume);
 
 function loseGame() {
   stopGame();
-  alert("Game over! You lost.");
+  alert("Game over! You lost. Final score: " + progress);
 }
 
 function winGame() {
@@ -111,7 +156,8 @@ const freqMap = {
   1: 261.6,
   2: 329.6,
   3: 392,
-  4: 466.2
+  4: 466.2,
+  5: 523.2
 }
 
 function playTone(btn,len){ 

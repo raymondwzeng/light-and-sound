@@ -49,6 +49,10 @@ button {
     transform: translateY(0px);
 }
 
+#gameButtonArea > div > button:hover {
+    transition-duration: 100ms;
+}
+
 .hidden {
   display: none;
 }
@@ -69,7 +73,11 @@ button {
 }
 
 #button1:active, #button1.lit {
-  background-color: green;
+  background-color: #6FE36D;
+}
+
+#button1:hover {
+  background-color: #6FE36D;
 }
 
 #button1_bottom {
@@ -80,20 +88,28 @@ button {
   background-color: lightblue;
 }
 
+#button2:hover {
+  background-color:  #2A6BEF;
+}
+
 #button2:active, #button2.lit {
-  background-color: blue;
+  background-color: #2358C3;
 }
 
 #button2_bottom {
-  background-color: blue;
+  background-color: #2358C3;
 }
 
 #button3 {
   background-color: pink;
 }
 
+#button3:hover {
+  background-color: #FB5D5D;
+}
+
 #button3:active, #button3.lit {
-  background-color: red;
+  background-color: #FB5D5D;
 }
 
 #button3_bottom {
@@ -104,17 +120,48 @@ button {
   background-color: lightyellow;
 }
 
+#button4:hover {
+  background-color: #F2F485;
+}
+
 #button4:active, #button4.lit {
   background-color: yellow;
 }
 
 #button4_bottom {
-  background-color: yellow;
+  background-color: #C6C617;
 }
 
-/* images and videos max out at full width */
-img,
-video {
-  height: auto;
-  max-width: 100%;
+#button5 {
+  background-color: #B378FF;
+}
+
+#button5:hover {
+  background-color: #A762FF;
+}
+
+#button5:active, #button5.lit {
+  background-color: #A762FF;
+}
+
+#button5_bottom {
+  background-color: #7C42C6;
+}
+
+#github_link {
+  display: flex;
+  justify-content: space-between;
+}
+
+#github_link > a > img {
+  transition-duration: 100ms;
+  margin-left: auto;
+  width: 64px;
+  height: 64px;
+}
+
+#github_link > a > img:hover {
+  transition-duration: 300ms;
+  width: 70px;
+  height: 70px;
 }
