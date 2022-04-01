@@ -21,6 +21,8 @@ Mario Jump Sprite from [PNGEgg](https://www.google.com/url?sa=i&url=https%3A%2F%
 
 GitHub Logo from [GitHub's Logo and Usage page](https://github.com/logos)
 
+Twilight Sparkle GIF from unknown author (background pony #06FB is a generic name), found on Derpibooru @ [https://derpibooru.org/images/1707133](https://derpibooru.org/images/1707133)
+
 **2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it?**
 
 One challenge that I encountered during the creation of this submission had to deal with (re)learning the CSS to make the website visually appealing.
