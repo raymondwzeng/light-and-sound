@@ -15,7 +15,15 @@ body {
   margin: 1rem;
   font-family: helvetica, arial, sans-serif;
   line-height: 1.5;
-  background-color: slategrey;
+}
+
+body.light {
+  background-color: #FFFDF0;
+  color: black;
+}
+
+body.dark {
+  background-color: #585858;
   color: white;
 }
 
@@ -27,6 +35,26 @@ button {
   border-width: 0;
   padding: 10px;
   border-radius: 10px;
+}
+
+#and_space {
+  padding: 0 10px;
+}
+
+#name-container {
+  display: flex;
+}
+
+#light.dark {
+  color: #FFFF00;
+}
+
+#light.light {
+  color: #646464;
+}
+
+#sound:hover {
+  color: purple; 
 }
 
 #gameButtonArea {
@@ -44,7 +72,12 @@ button {
   transform: translateY(-5px);
 }
 
-#gameButtonArea > div > button:active, #gameButton > div > #button.lit {
+#gameButtonArea > div > button:active, .lit {
+    transition-duration: 100ms;
+    transform: translateY(0px);
+}
+
+.lit {
     transition-duration: 100ms;
     transform: translateY(0px);
 }

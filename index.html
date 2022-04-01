@@ -13,18 +13,23 @@
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
   </head>
-  <body>
+  <body class="light">
     <!--Psst...check the JS for easter eggs!-->
     <div id="github_link">
-      <h1>Light and Sound</h1>
-    <a href="https://github.com/raymondwzeng/light-and-sound">
+      <div id="name-container">
+          <h1 id="light" class="light"> Light </h1>
+          <h1 id="and_space"> and </h1>
+          <h1 id="sound"> Sound </h1>
+      </div>
+    <a  target="__blank" rel="noopener norefferer" href="https://github.com/raymondwzeng/light-and-sound">
       <img id="github_logo" src="https://cdn.glitch.global/3f2d6dc2-b99b-4f94-935a-476eeb1f9ed4/GitHub-Mark-120px-plus.png?v=1648666680733" alt="GitHub Link"/>
     </a>
         </div>
     <!-- this is the start of content -->
     
     <p>
-      Welcome to the "Light and Sound"! This is a little demo project as a prework assignment for CodePath's <a href="https://apply.codepath.com/cohorts/summer-internship-for-tech-excellence-summer-2022/versions/student/?ref=CZwS-gwb">Summer Internship for Tech Excellence</a>.
+      Welcome to the "Light and Sound"! This is a little demo project as a prework assignment for CodePath's <a 
+                                                                                                                target="_blank" rel="noopener noreferrer" href="https://apply.codepath.com/cohorts/summer-internship-for-tech-excellence-summer-2022/versions/student/?ref=CZwS-gwb">Summer Internship for Tech Excellence</a>.
       The rules of the game are simple - listen to the sounds or see the lights flashing, and repeat the pattern in the same order! Click the button below to begin.
     </p>
     
@@ -41,23 +46,23 @@
     
     <div id="gameButtonArea">
       <div id="button1_bottom" class="button_bottom">
-        <button id="button1" onmousedown="guess(1)" onmouseup="stopTone()"></button>
+        <button id="button1" onmousedown="guess(1)" onmouseup="stopTone()"><h2> S </h2></button>
       </div>
       
       <div id="button2_bottom" class="button_bottom">
-        <button id="button2" onmousedown="guess(2)" onmouseup="stopTone()"></button>
+        <button id="button2" onmousedown="guess(2)" onmouseup="stopTone()"><h2> D </h2></button>
       </div>
       
       <div id="button3_bottom" class="button_bottom">
-        <button id="button3" onmousedown="guess(3)" onmouseup="stopTone()"></button>
+        <button id="button3" onmousedown="guess(3)" onmouseup="stopTone()"><h2> F </h2></button>
       </div>
       
       <div id="button4_bottom" class="button_bottom">
-        <button id="button4" onmousedown="guess(4)" onmouseup="stopTone()"></button>
+        <button id="button4" onmousedown="guess(4)" onmouseup="stopTone()"><h2> J </h2></button>
       </div>
       
       <div id="button5_bottom" class="button_bottom">
-        <button id="button5" onmousedown="guess(5)" onmouseup="stopTone()"></button>
+        <button id="button5" onmousedown="guess(5)" onmouseup="stopTone()"><h2> K </h2></button>
       </div>
     </div>
 
