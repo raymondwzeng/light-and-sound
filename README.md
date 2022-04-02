@@ -7,13 +7,21 @@ The pattern increases in complexity for each level, until either an error is mad
 # Time Breakdown
 
 - Adding basic functionality, brushing up on basic webdev HTML/CSS/JS (1 Hour)
-- Adding additional functionality, such as speeding up, additional buttons, and more (TBD)
+- Adding small additional functionality, such as speeding up, a volume slider, and slightly more impressive buttons (1 Hour)
 
 # Questions and Reflections
 
 **1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here.**
 
-Beyond the CodePath prework guide, I also used the Mozilla Developer Network (MDN) documentation extensively as a general manual for HTML/CSS/JS material.
+Beyond the CodePath prework guide, I used the Mozilla Developer Network (MDN) documentation extensively as a general manual for HTML/CSS/JS material, [HTMLColorCodes](https://htmlcolorcodes.com/) to select button hover color and the [Wikipedia Page for Piano Frequencies](https://en.wikipedia.org/wiki/Piano_key_frequencies) for the 5th button (C5).
+
+Mario Idle Sprite from [PNGWing](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Ffree-png-yserw&psig=AOvVaw3-FEb26vkKoK-fn9Uv2AzB&ust=1648751744033000&source=images&cd=vfe&ved=0CAwQjhxqFwoTCMjfuoK97vYCFQAAAAAdAAAAABAu)
+
+Mario Jump Sprite from [PNGEgg](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-nlqtr&psig=AOvVaw3-FEb26vkKoK-fn9Uv2AzB&ust=1648751744033000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjfuoK97vYCFQAAAAAdAAAAABA3)
+
+GitHub Logo from [GitHub's Logo and Usage page](https://github.com/logos)
+
+Twilight Sparkle GIF from unknown author (background pony #06FB is a generic name), found on Derpibooru @ [https://derpibooru.org/images/1707133](https://derpibooru.org/images/1707133)
 
 **2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it?**
 
